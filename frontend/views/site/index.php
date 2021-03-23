@@ -26,7 +26,7 @@ $this->title = 'MyMart';
                     </select>
                     <button value="submit">Cari</button>
                 </form>
-                <h3> total item : <?= $dataCount ?></h3>
+                <h4> total item : <?= $dataCount ?></h4>
                 <div class="col-lg-12 text-center">
                     <h1>Product From Our Store</h1>
                     <hr>

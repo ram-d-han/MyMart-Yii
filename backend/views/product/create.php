@@ -6,7 +6,6 @@ use yii\helpers\Html;
 /* @var $model backend\models\Product */
 
 $this->title = 'Create Product';
-$this->params['breadcrumbs'][] = ['label' => 'Products', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="product-create">

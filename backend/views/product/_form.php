@@ -2,11 +2,19 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\helpers\ArrayHelper;
+use backend\models\ItemCategory;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\Product */
 /* @var $form yii\widgets\ActiveForm */
+
+$category = ItemCategory::find()->all();
+
+$listData=ArrayHelper::map($category,'id','name');
+
 ?>
+
 
 <div class="product-form">
 
@@ -16,7 +24,9 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'price')->textInput() ?>
 
-    <?= $form->field($model, 'category_id')->textInput() ?>
+    <?= $form->field($model, 'name')->dropDownList($listData,
+        ['prompt'=>'Select...']
+    		); ?>
     <?= $form->field($model, 'image')->fileInput() ?>
 
     <div class="form-group">
